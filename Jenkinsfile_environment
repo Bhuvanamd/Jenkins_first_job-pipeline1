@@ -1,19 +1,19 @@
 pipeline {
-    agent any
+  agent any
 
-    environment {
-        APP='frontend'
-        DB_URL='192.168.28.24'
-    }
+  environment {
+    APP = 'frontend'
+    DB_URL = '192.168.28.24'
+  }
 
-    stages {
-        Stage('Environment Variables') {
-            steps {
-                script {
-                    echo "${env.APP}: ${env.DB_URL}"
-                }
-                sh "echo ${APP}"
-            }
+  stages {
+    stage('Environment Variables') {
+      steps {
+        script {
+          echo "${env.APP}: ${env.DB_URL}"
         }
+        sh "echo ${env.APP}"
+      }
     }
+  }
 }
