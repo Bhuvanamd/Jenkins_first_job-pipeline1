@@ -13,10 +13,6 @@ pipeline {
                 sh 'ls -lrt'
             }
         }
-            
-    }
-<<<<<<< HEAD
+     }
+  }
 }
-=======
-}
->>>>>>> refs/remotes/origin/main
