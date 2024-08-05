@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Code checkout') {
       steps {
-        git branch: 'main', credentialsId: 'Github_jenkins', url: 'https://github.com/Bhuvanamd/Jenkins_first_job-pipeline1.git'
+        git branch: 'main', credentialsId: 'Git_Docker_CI', url: 'https://github.com/Bhuvanamd/Jenkins_first_job-pipeline1.git'
       }
     }
     stage('Build') {
