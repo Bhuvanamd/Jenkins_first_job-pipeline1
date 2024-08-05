@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  stages {
+    stage('Code checkout') {
+      steps {
+        git branch: 'main', credentialsId: 'Github_jenkins', url: 'https://github.com/Bhuvanamd/Jenkins_first_job-pipeline1.git'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'ls -lrt'
+      }
+    }
+  }
+}
